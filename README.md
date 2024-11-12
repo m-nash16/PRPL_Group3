@@ -1,5 +1,4 @@
 **Information Extracted**
-
 - **Patient KTP**: `patient_ktp`
 - **Doctor KTP**: `doctor_ktp`
 - **Age**: `age`
@@ -13,3 +12,5 @@
 - **Referring Doctor**: `referring_doctor_name`
 - **Address**: `address`
 - **Date**: `date`
+
+**Resources: Patient, Practitioner, Encounter, Diagnosis**
