@@ -1,6 +1,6 @@
 **Information Extracted**
-- **Patient KTP**: `patient_ktp`
-- **Doctor KTP**: `doctor_ktp`
+- **Patient ID Number**: `patient_ktp`
+- **Doctor ID Number**: `doctor_ktp`
 - **Patient Age**: `age`
 - **Patient Gender**: `gender`
 - **Patient Phone Number**: `phone`
