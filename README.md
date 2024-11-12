@@ -1,16 +1,16 @@
 **Information Extracted**
 - **Patient KTP**: `patient_ktp`
 - **Doctor KTP**: `doctor_ktp`
-- **Age**: `age`
-- **Gender**: `gender`
-- **Phone**: `phone`
+- **Patient Age**: `age`
+- **Patient Gender**: `gender`
+- **Patient Phone Number**: `phone`
 - **Medical Record Number**: `medical_record_no`
-- **Complaint**: `complaint`
-- **Blood Type**: `blood_type`
+- **Complaints**: `complaint`
+- **Patient Blood Type**: `blood_type`
 - **Patient Name**: `patient_name`
 - **Doctor Name**: `doctor_name`
 - **Referring Doctor**: `referring_doctor_name`
-- **Address**: `address`
-- **Date**: `date`
+- **Patient Address**: `address`
+- **Date of Visit**: `date`
 
 **Resources: Patient, Practitioner, Encounter, Diagnosis**
