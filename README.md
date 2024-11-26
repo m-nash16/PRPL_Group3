@@ -13,4 +13,4 @@
 - **Patient Address**: `address`
 - **Date of Visit**: `date`
 
-**Resources: Patient, Practitioner, Encounter, Diagnosis**
+**Resources: Patient, Practitioner, Encounter, Condition**
