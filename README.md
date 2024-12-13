@@ -1,16 +1,22 @@
-**Information Extracted**
-- **Patient ID Number**: `patient_ktp`
-- **Doctor ID Number**: `doctor_ktp`
-- **Patient Age**: `age`
-- **Patient Gender**: `gender`
-- **Patient Phone Number**: `phone`
-- **Medical Record Number**: `medical_record_no`
-- **Complaints**: `complaint`
-- **Patient Blood Type**: `blood_type`
-- **Patient Name**: `patient_name`
-- **Doctor Name**: `doctor_name`
-- **Referring Doctor**: `referring_doctor_name`
-- **Patient Address**: `address`
-- **Date of Visit**: `date`
+Maps each entity into their appropriate resources namely **Patient, Pracititioner, Condition,** and **Encounter**
 
-**Resources: Patient, Practitioner, Encounter, Condition**
+**Patient Resource:**
+- Patient's Name
+- Patient KTP Number
+- Medical Record Number
+- Birth Year
+- Phone Number
+- Address
+
+**Practitioner Resource:**
+- Doctor's Name
+- Doctor KTP Number
+
+**Condition Resource:**
+- Patient Complaints
+- Doctor's recommendation
+- Date of Visit
+
+**Encounter Resource:**
+- Referral Doctor's Name
+- Referral Doctor's Notes
