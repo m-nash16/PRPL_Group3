@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "f2bbdad4-5685-48dd-a4b8-e52d2dfafec0",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010009"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "899178"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "rahmat widodo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1988",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. diponegoro no. 12"
+                ],
+                "city": "medan",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "f2bbdad4-5685-48dd-a4b8-e52d2dfafec0",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020001"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. aditya widjaja"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "f2bbdad4-5685-48dd-a4b8-e52d2dfafec0",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "diberikan antihistamin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "onsetDateTime": "2023-08-15"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "f2bbdad4-5685-48dd-a4b8-e52d2dfafec0",
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "period": {
+            "start": "2023-08-15"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "keluhan masih tetap dirasakan, perlu observasi lebih lanjut"
+                ]
+            }
+        ]
+    }
+}
