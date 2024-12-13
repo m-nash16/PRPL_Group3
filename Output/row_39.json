@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "6e0dad26-1eef-4352-9b4d-43234a06df6f",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010008"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "678072"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "wawan purnomo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1977",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. diponegoro no. 12"
+                ],
+                "city": "medan",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "6e0dad26-1eef-4352-9b4d-43234a06df6f",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020002"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. gunawan putra"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "6e0dad26-1eef-4352-9b4d-43234a06df6f",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "hipertensi, sakit pinggang"
+        },
+        "note": {
+            "text": [
+                "disarankan mengubah pola makan"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "onsetDateTime": "2023-09-01"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "6e0dad26-1eef-4352-9b4d-43234a06df6f",
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "period": {
+            "start": "2023-09-01"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "diberikan edukasi terkait penyakit"
+                ]
+            }
+        ]
+    }
+}

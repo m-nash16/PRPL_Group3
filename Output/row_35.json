@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "8e72985d-4599-426c-bf5c-708852235415",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010005"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "277670"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "lestari nugroho"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "2003",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "8e72985d-4599-426c-bf5c-708852235415",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020002"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. gunawan putra"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "8e72985d-4599-426c-bf5c-708852235415",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, pusing"
+        },
+        "note": {
+            "text": [
+                "diberikan inhaler"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "onsetDateTime": "2023-07-18"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "8e72985d-4599-426c-bf5c-708852235415",
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "period": {
+            "start": "2023-07-18"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "keluhan masih tetap dirasakan, perlu observasi lebih lanjut"
+                ]
+            }
+        ]
+    }
+}
