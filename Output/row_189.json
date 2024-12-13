@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "3a3457b2-11de-4596-9bc9-d0fcf994cf58",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010009"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "967392"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "andi suryana"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1961",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "3a3457b2-11de-4596-9bc9-d0fcf994cf58",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020005"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. aditya widjaja"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "3a3457b2-11de-4596-9bc9-d0fcf994cf58",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "alergi musiman, pusing"
+        },
+        "note": {
+            "text": [
+                "diberikan suplemen zat besi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "onsetDateTime": "2023-07-27"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "3a3457b2-11de-4596-9bc9-d0fcf994cf58",
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "period": {
+            "start": "2023-07-27"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "perlu dilakukan tes darah ulang"
+                ]
+            }
+        ]
+    }
+}

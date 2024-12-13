@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "6234de43-5697-4970-9224-164432afa4a0",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010007"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "991107"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "tono suryono"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1991",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "6234de43-5697-4970-9224-164432afa4a0",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020008"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. rini maharani"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "6234de43-5697-4970-9224-164432afa4a0",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "kolesterol tinggi, mual"
+        },
+        "note": {
+            "text": [
+                "diberikan antihistamin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010007"
+        },
+        "onsetDateTime": "2023-07-11"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "6234de43-5697-4970-9224-164432afa4a0",
+        "subject": {
+            "reference": "Patient/3276010101010007"
+        },
+        "period": {
+            "start": "2023-07-11"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. lukman"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "direkomendasikan untuk menjaga pola makan dan olahraga"
+                ]
+            }
+        ]
+    }
+}

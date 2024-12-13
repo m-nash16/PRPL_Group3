@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "2bfdfa7b-99c6-4116-84e6-883405a1f722",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010009"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "746183"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "tono suryono"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1969",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. diponegoro no. 12"
+                ],
+                "city": "medan",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "2bfdfa7b-99c6-4116-84e6-883405a1f722",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020010"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. budi santoso"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "2bfdfa7b-99c6-4116-84e6-883405a1f722",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "anemia, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "diberikan insulin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "onsetDateTime": "2023-09-28"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "2bfdfa7b-99c6-4116-84e6-883405a1f722",
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "period": {
+            "start": "2023-09-28"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "perlu dilakukan tes darah ulang"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "02ca9149-a5f9-4831-b144-248a534cbed5",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010005"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "113283"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1953",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "02ca9149-a5f9-4831-b144-248a534cbed5",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020009"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. rini maharani"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "02ca9149-a5f9-4831-b144-248a534cbed5",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "nyeri punggung, sakit pinggang"
+        },
+        "note": {
+            "text": [
+                "diberikan inhaler"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "onsetDateTime": "2023-09-27"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "02ca9149-a5f9-4831-b144-248a534cbed5",
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "period": {
+            "start": "2023-09-27"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "pasien perlu kontrol lagi dalam 1 minggu"
+                ]
+            }
+        ]
+    }
+}

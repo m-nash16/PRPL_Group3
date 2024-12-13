@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "23a2dfa7-f535-4f0e-9f8b-9942eba5c911",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010007"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "245234"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "lestari nugroho"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1960",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "23a2dfa7-f535-4f0e-9f8b-9942eba5c911",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020010"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sinta wulandari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "23a2dfa7-f535-4f0e-9f8b-9942eba5c911",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "diberikan inhaler"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010007"
+        },
+        "onsetDateTime": "2023-09-26"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "23a2dfa7-f535-4f0e-9f8b-9942eba5c911",
+        "subject": {
+            "reference": "Patient/3276010101010007"
+        },
+        "period": {
+            "start": "2023-09-26"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "akan dirujuk ke spesialis untuk evaluasi lebih lanjut"
+                ]
+            }
+        ]
+    }
+}

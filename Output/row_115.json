@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "5f9a1db5-08f3-4525-ab5d-b48b0d92cd50",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010009"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "860385"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "rahmat widodo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1972",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "5f9a1db5-08f3-4525-ab5d-b48b0d92cd50",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020003"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. farida lestari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "5f9a1db5-08f3-4525-ab5d-b48b0d92cd50",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "hipertensi, sesak napas"
+        },
+        "note": {
+            "text": [
+                "diberikan diuretik"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "onsetDateTime": "2023-09-17"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "5f9a1db5-08f3-4525-ab5d-b48b0d92cd50",
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "period": {
+            "start": "2023-09-17"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "dijadwalkan untuk pemeriksaan lanjutan bulan depan"
+                ]
+            }
+        ]
+    }
+}

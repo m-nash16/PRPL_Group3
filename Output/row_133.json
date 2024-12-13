@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "c4204223-4497-47f7-8cab-6ba99503aada",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010002"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "224418"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "rahmat widodo"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1948",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. diponegoro no. 12"
+                ],
+                "city": "medan",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "c4204223-4497-47f7-8cab-6ba99503aada",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020010"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. rini maharani"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "c4204223-4497-47f7-8cab-6ba99503aada",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "hipertensi, kelelahan"
+        },
+        "note": {
+            "text": [
+                "diberikan inhaler"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "onsetDateTime": "2023-08-01"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "c4204223-4497-47f7-8cab-6ba99503aada",
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "period": {
+            "start": "2023-08-01"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "diminta mengurangi konsumsi garam dan lemak"
+                ]
+            }
+        ]
+    }
+}

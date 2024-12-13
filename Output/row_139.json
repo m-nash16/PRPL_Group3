@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "8062e906-abd8-4c0d-9e4a-19db676d199a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010010"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "546528"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "tono suryono"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1972",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "8062e906-abd8-4c0d-9e4a-19db676d199a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020008"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. farida lestari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "8062e906-abd8-4c0d-9e4a-19db676d199a",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "diabetes mellitus tipe 2, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan diuretik"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "onsetDateTime": "2023-07-06"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "8062e906-abd8-4c0d-9e4a-19db676d199a",
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "period": {
+            "start": "2023-07-06"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "pasien perlu kontrol lagi dalam 1 minggu"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "14854500-fd08-4b69-89e4-323c3706f32c",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010010"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "937414"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "wawan purnomo"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1996",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. diponegoro no. 12"
+                ],
+                "city": "medan",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "14854500-fd08-4b69-89e4-323c3706f32c",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020007"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. budi santoso"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "14854500-fd08-4b69-89e4-323c3706f32c",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "hipertensi, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "diberikan insulin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "onsetDateTime": "2023-07-28"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "14854500-fd08-4b69-89e4-323c3706f32c",
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "period": {
+            "start": "2023-07-28"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "keluhan sudah berkurang setelah pengobatan"
+                ]
+            }
+        ]
+    }
+}

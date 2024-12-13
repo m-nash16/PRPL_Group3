@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "c6c1c6b2-5e74-449b-98b5-5918d5978c35",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010008"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "877963"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "andi suryana"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1997",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6282234567654"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "c6c1c6b2-5e74-449b-98b5-5918d5978c35",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020008"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sumarno hadi"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "c6c1c6b2-5e74-449b-98b5-5918d5978c35",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "diabetes mellitus tipe 2, kelelahan"
+        },
+        "note": {
+            "text": [
+                "diberikan antihistamin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "onsetDateTime": "2023-08-28"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "c6c1c6b2-5e74-449b-98b5-5918d5978c35",
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "period": {
+            "start": "2023-08-28"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "dijadwalkan untuk pemeriksaan lanjutan bulan depan"
+                ]
+            }
+        ]
+    }
+}
