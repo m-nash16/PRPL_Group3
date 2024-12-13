@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "5714fe21-47b8-4d46-b653-01b5921fd04e",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010001"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "404203"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1960",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "5714fe21-47b8-4d46-b653-01b5921fd04e",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020005"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. rini maharani"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "5714fe21-47b8-4d46-b653-01b5921fd04e",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "infeksi saluran pernapasan, sakit pinggang"
+        },
+        "note": {
+            "text": [
+                "diberikan antihistamin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "onsetDateTime": "2023-09-14"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "5714fe21-47b8-4d46-b653-01b5921fd04e",
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "period": {
+            "start": "2023-09-14"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "diberikan edukasi terkait penyakit"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "c45c7cbd-c2a0-4c3a-96bc-526e11c4e722",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010008"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "180205"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "wawan purnomo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1999",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "c45c7cbd-c2a0-4c3a-96bc-526e11c4e722",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020001"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. budi santoso"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "c45c7cbd-c2a0-4c3a-96bc-526e11c4e722",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "alergi musiman, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan suplemen zat besi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "onsetDateTime": "2023-07-24"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "c45c7cbd-c2a0-4c3a-96bc-526e11c4e722",
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "period": {
+            "start": "2023-07-24"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "direkomendasikan untuk menjaga pola makan dan olahraga"
+                ]
+            }
+        ]
+    }
+}

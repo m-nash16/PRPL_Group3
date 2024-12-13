@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "99d58e51-76f3-4719-81a3-d60d1aa955c6",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010010"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "917368"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "tono suryono"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1973",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6282234567654"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "99d58e51-76f3-4719-81a3-d60d1aa955c6",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020003"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. andika pratama"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "99d58e51-76f3-4719-81a3-d60d1aa955c6",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "migrain, mual"
+        },
+        "note": {
+            "text": [
+                "direkomendasikan fisioterapi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "onsetDateTime": "2023-07-08"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "99d58e51-76f3-4719-81a3-d60d1aa955c6",
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "period": {
+            "start": "2023-07-08"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "keluhan sudah berkurang setelah pengobatan"
+                ]
+            }
+        ]
+    }
+}

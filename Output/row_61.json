@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "47513aad-4738-4ba8-8c52-582d49b42e7e",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010004"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "683988"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "lestari nugroho"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1948",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6282234567654"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "47513aad-4738-4ba8-8c52-582d49b42e7e",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020010"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. gunawan putra"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "47513aad-4738-4ba8-8c52-582d49b42e7e",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "diabetes mellitus tipe 2, pusing"
+        },
+        "note": {
+            "text": [
+                "diberikan diuretik"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010004"
+        },
+        "onsetDateTime": "2023-08-15"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "47513aad-4738-4ba8-8c52-582d49b42e7e",
+        "subject": {
+            "reference": "Patient/3276010101010004"
+        },
+        "period": {
+            "start": "2023-08-15"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "pasien perlu kontrol lagi dalam 1 minggu"
+                ]
+            }
+        ]
+    }
+}
