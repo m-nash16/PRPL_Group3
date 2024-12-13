@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "d4f29558-3e87-4aec-a263-9257e3a4c287",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010009"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "345008"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "siti aminah"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1991",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "d4f29558-3e87-4aec-a263-9257e3a4c287",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020007"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. farida lestari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "d4f29558-3e87-4aec-a263-9257e3a4c287",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "migrain, sakit pinggang"
+        },
+        "note": {
+            "text": [
+                "diberikan insulin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "onsetDateTime": "2023-07-21"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "d4f29558-3e87-4aec-a263-9257e3a4c287",
+        "subject": {
+            "reference": "Patient/3276010101010009"
+        },
+        "period": {
+            "start": "2023-07-21"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "perlu dilakukan tes darah ulang"
+                ]
+            }
+        ]
+    }
+}

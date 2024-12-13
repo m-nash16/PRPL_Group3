@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "7a3309e9-cf16-4fff-866e-9f5fba4669de",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010010"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "391496"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1999",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "7a3309e9-cf16-4fff-866e-9f5fba4669de",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020004"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sumarno hadi"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "7a3309e9-cf16-4fff-866e-9f5fba4669de",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "nyeri punggung, kelelahan"
+        },
+        "note": {
+            "text": [
+                "diberikan insulin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "onsetDateTime": "2023-08-16"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "7a3309e9-cf16-4fff-866e-9f5fba4669de",
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "period": {
+            "start": "2023-08-16"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. lukman"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "diberikan edukasi terkait penyakit"
+                ]
+            }
+        ]
+    }
+}

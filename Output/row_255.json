@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "eede8be0-d107-46bd-883d-b94953eca100",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010002"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "699107"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "nita susanti"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1983",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "eede8be0-d107-46bd-883d-b94953eca100",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020005"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sinta wulandari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "eede8be0-d107-46bd-883d-b94953eca100",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "asma, batuk"
+        },
+        "note": {
+            "text": [
+                "diberikan diuretik"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "onsetDateTime": "2023-07-03"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "eede8be0-d107-46bd-883d-b94953eca100",
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "period": {
+            "start": "2023-07-03"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "direkomendasikan untuk menjaga pola makan dan olahraga"
+                ]
+            }
+        ]
+    }
+}

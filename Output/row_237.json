@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "6a9d817a-77dc-4bce-a5a9-6ede3e37ae13",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010005"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "235708"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "nita susanti"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1964",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "6a9d817a-77dc-4bce-a5a9-6ede3e37ae13",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020002"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. farida lestari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "6a9d817a-77dc-4bce-a5a9-6ede3e37ae13",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "alergi musiman, mual"
+        },
+        "note": {
+            "text": [
+                "direkomendasikan fisioterapi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "onsetDateTime": "2023-09-25"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "6a9d817a-77dc-4bce-a5a9-6ede3e37ae13",
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "period": {
+            "start": "2023-09-25"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "pasien perlu kontrol lagi dalam 1 minggu"
+                ]
+            }
+        ]
+    }
+}

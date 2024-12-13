@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "01869079-f22f-4136-a559-c34d13140a12",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010004"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "371826"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "yudi raharjo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1970",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "01869079-f22f-4136-a559-c34d13140a12",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020009"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sari utami"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "01869079-f22f-4136-a559-c34d13140a12",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "infeksi saluran pernapasan, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "disarankan mengubah pola makan"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010004"
+        },
+        "onsetDateTime": "2023-07-17"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "01869079-f22f-4136-a559-c34d13140a12",
+        "subject": {
+            "reference": "Patient/3276010101010004"
+        },
+        "period": {
+            "start": "2023-07-17"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "perlu dilakukan tes darah ulang"
+                ]
+            }
+        ]
+    }
+}

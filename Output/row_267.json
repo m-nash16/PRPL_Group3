@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "1bd030f6-9b26-4b78-8e3e-3c6878ed7d70",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010005"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "353866"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1993",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "1bd030f6-9b26-4b78-8e3e-3c6878ed7d70",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020008"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sinta wulandari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "1bd030f6-9b26-4b78-8e3e-3c6878ed7d70",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "alergi musiman, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan obat antihipertensi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "onsetDateTime": "2023-09-19"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "1bd030f6-9b26-4b78-8e3e-3c6878ed7d70",
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "period": {
+            "start": "2023-09-19"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "dijadwalkan untuk pemeriksaan lanjutan bulan depan"
+                ]
+            }
+        ]
+    }
+}

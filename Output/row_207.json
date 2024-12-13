@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "bd60558d-e3af-44c9-811e-d4f4fb0cf542",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010001"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "455598"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "rahmat widodo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "2000",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "bd60558d-e3af-44c9-811e-d4f4fb0cf542",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020010"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sumarno hadi"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "bd60558d-e3af-44c9-811e-d4f4fb0cf542",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "hipertensi, sakit pinggang"
+        },
+        "note": {
+            "text": [
+                "disarankan mengubah pola makan"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "onsetDateTime": "2023-09-20"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "bd60558d-e3af-44c9-811e-d4f4fb0cf542",
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "period": {
+            "start": "2023-09-20"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "direkomendasikan untuk menjaga pola makan dan olahraga"
+                ]
+            }
+        ]
+    }
+}

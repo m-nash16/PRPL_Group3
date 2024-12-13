@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "4f8f434b-1b59-40f4-9315-704d7f15cfaf",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010001"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "658945"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "yudi raharjo"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1949",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6282234567654"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "4f8f434b-1b59-40f4-9315-704d7f15cfaf",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020004"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sinta wulandari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "4f8f434b-1b59-40f4-9315-704d7f15cfaf",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "infeksi saluran pernapasan, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "direkomendasikan fisioterapi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "onsetDateTime": "2023-08-12"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "4f8f434b-1b59-40f4-9315-704d7f15cfaf",
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "period": {
+            "start": "2023-08-12"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "dijadwalkan untuk pemeriksaan lanjutan bulan depan"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "4add5d38-f44f-4174-8d47-c0c4b1a33d9d",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010006"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "427181"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "nita susanti"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1946",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "4add5d38-f44f-4174-8d47-c0c4b1a33d9d",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020010"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sari utami"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "4add5d38-f44f-4174-8d47-c0c4b1a33d9d",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, pusing"
+        },
+        "note": {
+            "text": [
+                "diberikan suplemen zat besi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010006"
+        },
+        "onsetDateTime": "2023-09-26"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "4add5d38-f44f-4174-8d47-c0c4b1a33d9d",
+        "subject": {
+            "reference": "Patient/3276010101010006"
+        },
+        "period": {
+            "start": "2023-09-26"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "diminta mengurangi konsumsi garam dan lemak"
+                ]
+            }
+        ]
+    }
+}

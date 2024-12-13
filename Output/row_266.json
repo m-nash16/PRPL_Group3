@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "d358b30c-d935-48fe-aab9-7583e09d2f09",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010001"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "666812"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1981",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "d358b30c-d935-48fe-aab9-7583e09d2f09",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020007"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. rini maharani"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "d358b30c-d935-48fe-aab9-7583e09d2f09",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, kelelahan"
+        },
+        "note": {
+            "text": [
+                "diberikan antihistamin"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "onsetDateTime": "2023-08-27"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "d358b30c-d935-48fe-aab9-7583e09d2f09",
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "period": {
+            "start": "2023-08-27"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. lukman"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "diberikan edukasi terkait penyakit"
+                ]
+            }
+        ]
+    }
+}

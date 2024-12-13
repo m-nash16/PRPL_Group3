@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "8dcd1b63-0b14-459e-b3f1-0d45f83acc0c",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010001"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "615930"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1958",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "8dcd1b63-0b14-459e-b3f1-0d45f83acc0c",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020004"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. gunawan putra"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "8dcd1b63-0b14-459e-b3f1-0d45f83acc0c",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "asma, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan antibiotik selama 5 hari"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "onsetDateTime": "2023-08-18"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "8dcd1b63-0b14-459e-b3f1-0d45f83acc0c",
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "period": {
+            "start": "2023-08-18"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "perlu dilakukan tes darah ulang"
+                ]
+            }
+        ]
+    }
+}

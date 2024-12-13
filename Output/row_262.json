@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "f651300a-a187-402a-99ea-5f229e735cc5",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010007"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "867199"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1955",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "f651300a-a187-402a-99ea-5f229e735cc5",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020003"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sinta wulandari"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "f651300a-a187-402a-99ea-5f229e735cc5",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "direkomendasikan fisioterapi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010007"
+        },
+        "onsetDateTime": "2023-09-21"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "f651300a-a187-402a-99ea-5f229e735cc5",
+        "subject": {
+            "reference": "Patient/3276010101010007"
+        },
+        "period": {
+            "start": "2023-09-21"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "pasien perlu kontrol lagi dalam 1 minggu"
+                ]
+            }
+        ]
+    }
+}

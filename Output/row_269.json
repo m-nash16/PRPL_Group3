@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "be403108-e9a0-4a9b-9f26-cfce9028026a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010002"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "383566"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "wawan purnomo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1982",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "be403108-e9a0-4a9b-9f26-cfce9028026a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020003"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. gunawan putra"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "be403108-e9a0-4a9b-9f26-cfce9028026a",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "asma, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan antibiotik selama 5 hari"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "onsetDateTime": "2023-07-01"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "be403108-e9a0-4a9b-9f26-cfce9028026a",
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "period": {
+            "start": "2023-07-01"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "keluhan sudah berkurang setelah pengobatan"
+                ]
+            }
+        ]
+    }
+}

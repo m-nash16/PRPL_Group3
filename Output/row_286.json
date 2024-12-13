@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "2c500501-9e22-4f74-804d-b1c5ab802ec5",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010005"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "263765"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "dewi santika"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1981",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "2c500501-9e22-4f74-804d-b1c5ab802ec5",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020005"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. gunawan putra"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "2c500501-9e22-4f74-804d-b1c5ab802ec5",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "diabetes mellitus tipe 2, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan diuretik"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "onsetDateTime": "2023-09-11"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "2c500501-9e22-4f74-804d-b1c5ab802ec5",
+        "subject": {
+            "reference": "Patient/3276010101010005"
+        },
+        "period": {
+            "start": "2023-09-11"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "pasien merasa lebih baik setelah obat diberikan"
+                ]
+            }
+        ]
+    }
+}

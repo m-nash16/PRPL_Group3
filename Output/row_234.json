@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "71ba9537-dce4-4893-af58-fe26d4192c4a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010002"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "525025"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "yudi raharjo"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1960",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "71ba9537-dce4-4893-af58-fe26d4192c4a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020004"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. budi santoso"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "71ba9537-dce4-4893-af58-fe26d4192c4a",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "hipertensi, sesak napas"
+        },
+        "note": {
+            "text": [
+                "diberikan suplemen zat besi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "onsetDateTime": "2023-08-02"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "71ba9537-dce4-4893-af58-fe26d4192c4a",
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "period": {
+            "start": "2023-08-02"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "diminta mengurangi konsumsi garam dan lemak"
+                ]
+            }
+        ]
+    }
+}

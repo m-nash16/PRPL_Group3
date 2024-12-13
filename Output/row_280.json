@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "20c0f99f-49fc-4c2d-8ac5-eeab25f2ec21",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010010"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "295731"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "rahmat widodo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1988",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6282234567654"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "20c0f99f-49fc-4c2d-8ac5-eeab25f2ec21",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020005"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. rini maharani"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "20c0f99f-49fc-4c2d-8ac5-eeab25f2ec21",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "kolesterol tinggi, sesak napas"
+        },
+        "note": {
+            "text": [
+                "diberikan suplemen zat besi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "onsetDateTime": "2023-08-27"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "20c0f99f-49fc-4c2d-8ac5-eeab25f2ec21",
+        "subject": {
+            "reference": "Patient/3276010101010010"
+        },
+        "period": {
+            "start": "2023-08-27"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "akan dirujuk ke spesialis untuk evaluasi lebih lanjut"
+                ]
+            }
+        ]
+    }
+}

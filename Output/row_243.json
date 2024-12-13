@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "ba285a4f-2f10-4e8e-8447-06aa32977314",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010001"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "650598"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "nita susanti"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1988",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6282234567654"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. merdeka no. 123"
+                ],
+                "city": "jakarta",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "ba285a4f-2f10-4e8e-8447-06aa32977314",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020010"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sumarno hadi"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "ba285a4f-2f10-4e8e-8447-06aa32977314",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan obat antihipertensi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "onsetDateTime": "2023-07-23"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "ba285a4f-2f10-4e8e-8447-06aa32977314",
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "period": {
+            "start": "2023-07-23"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "dijadwalkan untuk pemeriksaan lanjutan bulan depan"
+                ]
+            }
+        ]
+    }
+}
