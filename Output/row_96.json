@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "ba6a2ba7-1d3b-463e-9346-8539605d32ed",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010008"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "927826"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "tono suryono"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1953",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. diponegoro no. 12"
+                ],
+                "city": "medan",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "ba6a2ba7-1d3b-463e-9346-8539605d32ed",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020002"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. wahyu nugraha"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "ba6a2ba7-1d3b-463e-9346-8539605d32ed",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "kolesterol tinggi, nyeri kepala"
+        },
+        "note": {
+            "text": [
+                "diberikan suplemen zat besi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "onsetDateTime": "2023-07-10"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "ba6a2ba7-1d3b-463e-9346-8539605d32ed",
+        "subject": {
+            "reference": "Patient/3276010101010008"
+        },
+        "period": {
+            "start": "2023-07-10"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. lukman"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "akan dirujuk ke spesialis untuk evaluasi lebih lanjut"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "cad62240-4bba-4801-a0c5-58aaecd9067a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010002"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "339932"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "andi suryana"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1969",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "cad62240-4bba-4801-a0c5-58aaecd9067a",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020008"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. sumarno hadi"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "cad62240-4bba-4801-a0c5-58aaecd9067a",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "gagal jantung, kelelahan"
+        },
+        "note": {
+            "text": [
+                "direkomendasikan fisioterapi"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "onsetDateTime": "2023-07-20"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "cad62240-4bba-4801-a0c5-58aaecd9067a",
+        "subject": {
+            "reference": "Patient/3276010101010002"
+        },
+        "period": {
+            "start": "2023-07-20"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. diah"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "perlu dilakukan tes darah ulang"
+                ]
+            }
+        ]
+    }
+}

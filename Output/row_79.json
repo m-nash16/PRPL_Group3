@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "3239a812-8abc-40fd-aa65-1080bd70c7ca",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010001"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "183020"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "wawan purnomo"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1998",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281234567890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "3239a812-8abc-40fd-aa65-1080bd70c7ca",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020002"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. andika pratama"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "3239a812-8abc-40fd-aa65-1080bd70c7ca",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "migrain, sesak napas"
+        },
+        "note": {
+            "text": [
+                "diberikan diuretik"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "onsetDateTime": "2023-08-18"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "3239a812-8abc-40fd-aa65-1080bd70c7ca",
+        "subject": {
+            "reference": "Patient/3276010101010001"
+        },
+        "period": {
+            "start": "2023-08-18"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. dian"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "keluhan masih tetap dirasakan, perlu observasi lebih lanjut"
+                ]
+            }
+        ]
+    }
+}

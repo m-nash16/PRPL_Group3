@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "a2474dc6-1e3f-4b8c-8866-0175332dc135",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010006"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "457782"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "lestari nugroho"
+            }
+        ],
+        "gender": "male",
+        "birthDate": "1957",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6285643217890"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. imam bonjol no. 78"
+                ],
+                "city": "surabaya",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "a2474dc6-1e3f-4b8c-8866-0175332dc135",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020006"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. budi santoso"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "a2474dc6-1e3f-4b8c-8866-0175332dc135",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "migrain, pusing"
+        },
+        "note": {
+            "text": [
+                "disarankan mengubah pola makan"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010006"
+        },
+        "onsetDateTime": "2023-08-18"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "a2474dc6-1e3f-4b8c-8866-0175332dc135",
+        "subject": {
+            "reference": "Patient/3276010101010006"
+        },
+        "period": {
+            "start": "2023-08-18"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. hasan"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "pasien merasa lebih baik setelah obat diberikan"
+                ]
+            }
+        ]
+    }
+}

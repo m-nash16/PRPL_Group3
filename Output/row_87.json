@@ -1,0 +1,115 @@
+{
+    "Patient": {
+        "resourceType": "Patient",
+        "id": "41b2f445-2ab2-4d28-aa9e-d92b5b31abf1",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3276010101010003"
+            },
+            {
+                "system": "https://fhir.kemkes.go.id/id/ihs-number",
+                "value": "429994"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "use": "official",
+                "text": "andi suryana"
+            }
+        ],
+        "gender": "female",
+        "birthDate": "1959",
+        "telecom": [
+            {
+                "system": "phone",
+                "value": "+6281987654321"
+            }
+        ],
+        "address": [
+            {
+                "line": [
+                    "jl. sudirman no. 56"
+                ],
+                "city": "bandung",
+                "country": "ID"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Patient"
+            ]
+        }
+    },
+    "Practitioner": {
+        "resourceType": "Practitioner",
+        "id": "41b2f445-2ab2-4d28-aa9e-d92b5b31abf1",
+        "identifier": [
+            {
+                "system": "http://satusehat.kemkes.go.id/nik",
+                "value": "3173010202020003"
+            }
+        ],
+        "active": true,
+        "name": [
+            {
+                "text": "dr. wahyu nugraha"
+            }
+        ],
+        "meta": {
+            "profile": [
+                "http://hl7.org/fhir/StructuredDefinition/Practitioner"
+            ]
+        }
+    },
+    "Condition": {
+        "resourceType": "Condition",
+        "id": "41b2f445-2ab2-4d28-aa9e-d92b5b31abf1",
+        "clinicalStatus": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                    "code": "active",
+                    "display": "Active"
+                }
+            ]
+        },
+        "code": {
+            "text": "hipertensi, sulit tidur"
+        },
+        "note": {
+            "text": [
+                "diberikan inhaler"
+            ]
+        },
+        "subject": {
+            "reference": "Patient/3276010101010003"
+        },
+        "onsetDateTime": "2023-07-15"
+    },
+    "Encounter": {
+        "resourceType": "Encounter",
+        "id": "41b2f445-2ab2-4d28-aa9e-d92b5b31abf1",
+        "subject": {
+            "reference": "Patient/3276010101010003"
+        },
+        "period": {
+            "start": "2023-07-15"
+        },
+        "participant": [
+            {
+                "individual": {
+                    "reference": "Referral Doctor/dr. lukman"
+                }
+            }
+        ],
+        "note": [
+            {
+                "text": [
+                    "keluhan sudah berkurang setelah pengobatan"
+                ]
+            }
+        ]
+    }
+}
